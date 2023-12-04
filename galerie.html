@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      a {
+        border-bottom: 1px solid white;
+        padding: 5px;
+        transition: 0.2s linear;
+      }
+      a:hover {
+        padding: 0px;
+      }
+      @font-face {
+        font-family: myFirstFont;
+        src: url(OrientalCatsLight-2OzB8.otf);
+      }
+      a {
+        border-bottom: 1px solid white;
+        padding: 5px;
+        transition: 0.2s linear;
+      }
+      a:hover {
+        padding: 0px;
+      }
+      * {
+        font-size: 1.2rem;
+        font-family: myFirstFont;
+        overflow-x: hidden;
+        cursor: default;
+      }
+      body {
+        background-image: url(./DALL·E\ 2023-12-04\ 18.22.08\ -\ A\ large\,\ panoramic\ sketch\ for\ a\ website\ background\ featuring\ a\ cute\,\ stylized\ cat.\ The\ cat\,\ drawn\ with\ cartoon-like\ charm\,\ stands\ on\ its\ hind\ legs\,\ ho.png);
+
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        background-repeat: no-repeat;
+        color: #c2e7d9;
+        font-size: 1.1em;
+      }
+      header,
+      footer {
+        position: fixed;
+        left: 10px;
+        color: #000000;
+      }
+
+      header {
+        top: 10px;
+      }
+
+      footer {
+        bottom: 10px;
+      }
+
+      /* Navigation Buttons */
+      nav {
+        font-size: 1.2rem;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(238, 120, 208, 0.7);
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      nav a {
+        color: #c2e7d9;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 1em;
+      }
+
+      nav a:hover {
+        color: #a6cfd5;
+      }
+
+      h2 {
+        color: white;
+      }
+      li {
+        font-size: 3rem;
+        background-color: rgba(255, 255, 255, 0.627);
+        border-radius: 10px;
+        padding: 5px;
+      }
+      ul {
+        padding: 30px;
+      }
+      .carousel {
+        background-color: black;
+        width: 90vw;
+        height: 75vh;
+        margin: 20px auto;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .carousel-images img {
+        transition: opacity 1s ease-in-out;
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: absolute;
+      }
+
+      .carousel-images img.active {
+        display: block;
+        opacity: 1;
+      }
+
+      .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+      }
+
+      .carousel-button.left {
+        left: 10px;
+      }
+
+      .carousel-button.right {
+        right: 10px;
+      }
+    </style>
+    <title>Galerie - Purrfect Haven Cat Café</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Acasa</a>
+      <a href="about.html">Despre</a>
+      <a href="adoptii.html">Adoptii</a>
+      <a href="contact.html">Contact</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="meniu.html">Meniu</a>
+      <a href="locatie.html">Locatie</a>
+      <a href="program.html">Program</a>
+    </nav>
+    <br />
+    <br />
+    <h1 style="color: pink; font-size: 3rem">Galerie</h1>
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="./p1.jpeg" class="active" />
+        <img src="./p2.jpeg" class="active" />
+        <img src="./p3.jpeg" class="active" />
+        <img src="./p4.jpg" class="active" />
+        <img src="./p5.jpg" class="active" />
+        <img src="./p6.jpg" class="active" />
+
+        <!-- Add more images as needed -->
+      </div>
+      <button class="carousel-button left" onclick="moveSlide(-1)">
+        &#10094;
+      </button>
+      <button class="carousel-button right" onclick="moveSlide(1)">
+        &#10095;
+      </button>
+    </div>
+
+    <script>
+      var currentSlide = 0;
+      var slides = document.querySelectorAll(".carousel-images img");
+      var totalSlides = slides.length;
+
+      function moveSlide(step) {
+        slides[currentSlide].classList.remove("active");
+        slides[currentSlide].style.opacity = "0"; // Hide the current slide smoothly
+
+        // Calculate the next slide
+        currentSlide = (currentSlide + step + totalSlides) % totalSlides;
+
+        slides[currentSlide].classList.add("active");
+        slides[currentSlide].style.opacity = "1"; // Show the next slide smoothly
+      }
+
+      // Example usage: Automatically move to the next slide every 3 seconds
+      setInterval(function () {
+        moveSlide(1);
+      }, 3000);
+    </script>
+
+    <footer>&copy;Purrfect</footer>
+    <header>&copy;Purrfect</header>
+  </body>
+</html>

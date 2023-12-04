@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      a:hover {
+        padding: 0px;
+      }
+      @font-face {
+        font-family: myFirstFont;
+        src: url(OrientalCatsLight-2OzB8.otf);
+      }
+      a {
+        border-bottom: 1px solid rgb(0, 0, 0);
+        padding: 5px;
+        transition: 0.2s linear;
+      }
+      a:hover {
+        padding: 0px;
+      }
+      * {
+        font-size: 1.2rem;
+        font-family: myFirstFont;
+        overflow-x: hidden;
+        cursor: default;
+      }
+      body {
+        background-image: url(./clockcat.png);
+
+        background-attachment: fixed;
+        background-position: center;
+        background-size: contain;
+        text-align: center;
+        color: #000000;
+        font-size: 1.1em;
+      }
+      header,
+      footer {
+        position: fixed;
+        left: 10px;
+        color: #000000;
+      }
+
+      header {
+        top: 10px;
+      }
+
+      footer {
+        bottom: 10px;
+      }
+
+      /* Navigation Buttons */
+      nav {
+        font-size: 1.2rem;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+      }
+      nav a {
+        color: #000000;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 1em;
+      }
+      nav a:hover {
+        color: #3e3e3e;
+      }
+      h2 {
+        color: white;
+      }
+      li {
+        font-size: 3rem;
+        background-color: rgba(81, 37, 37, 0.627);
+        border-radius: 10px;
+        padding: 5px;
+      }
+      ul {
+        padding: 30px;
+      }
+      td {
+        font-size: 3rem;
+      }
+    </style>
+    <title>Program - Purrfect Haven Cat Café</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Acasa</a>
+      <a href="about.html">Despre</a>
+      <a href="adoptii.html">Adoptii</a>
+      <a href="contact.html">Contact</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="meniu.html">Meniu</a>
+      <a href="locatie.html">Locatie</a>
+      <a href="program.html">Program</a>
+    </nav>
+    <br />
+    <br />
+    <h1 style="color: rgb(146, 146, 146); font-size: 3rem">Program</h1>
+    <br />
+    <br />
+    <table
+      style="
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(128, 128, 128, 0.89);
+        border-radius: 10px;
+      "
+    >
+      <tbody>
+        <tr style="height: 31px">
+          <td style="width: 50%; text-align: right">Luni</td>
+          <td style="width: 50%">
+            <span style="color: #ab4b4b; font-size: 3rem"
+              ><strong style="font-size: 2rem">ÎNCHIS</strong></span
+            >
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 50%; text-align: right">Marți - Duminică</td>
+          <td style="width: 50%">
+            <span style="color: #000000; font-size: 3rem">12:00-22:00</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <footer>&copy;Purrfect</footer>
+    <header>&copy;Purrfect</header>
+  </body>
+</html>
